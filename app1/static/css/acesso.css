@@ -1,0 +1,29 @@
+h2 {
+    text-align: center;
+    color: black;
+    font-size: 1.5em;
+}
+.djangtwo {
+    text-align: center;
+    color: black;
+    margin-top: 0;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-outside: 0;
+    margin-bottom: 40px;
+    font-size: 0.8em;
+}
+.djangtwo table{
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    content: "";
+	background-color: #C9BC8F;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+    }

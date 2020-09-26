@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'app1/index.html' %}
+{% load static %}
+
+    <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <title>title</title>
+        </head>
+        <body>
+            {% block conteudo %}
+                <h1>olá, area de ajuda</h1>
+                {{  variavel }}
+            {% endblock %}
+        </body>
+    </html>

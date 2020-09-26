@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+
+    <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+            <title>Programação Web II</title>
+        </head>
+        <body>
+            {% block body %}
+                <div class="pag">
+                    <div class="menu">
+                        <nav>
+                            <a href="{% url 'index' %}">Inicio</a>
+                            <a href="{% url 'app1:sp' %}">São Paulo</a>
+                            <a href="{% url 'app1:calculadora' %}">Calculadora</a>
+                            <a href="{% url 'admin:index' %}">Painel Admin</a>
+                            <a href="{% url 'app1:acesso' %}">Registro de Acesso</a>
+                            <a href="{% url 'app1:modelform' %}">Formulario</a>
+                            <a href="{% url 'app1:form' %}">Form</a>
+                            <a href="{% url 'app1:help' %}">Ajuda</a>
+                        </nav>
+                    </div>
+                    {% block conteudosp %}
+                        <div class="conteudo">
+                            {% block conteudo %}
+                                <div class="imagem-Django"></div>
+                                <p class ="estilo">Programando em Django</p>
+                        </div>
+                        {% endblock %}
+                        <div class="rodape">
+                            {% block rodape %}
+                                <p class="p-rodape">Página HTML desenvolvido por Rogério Dagnon®</p>
+                            {% endblock %}
+                        </div>
+                    {% endblock %}
+                </div>
+            {% endblock %}
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        </body>
+    </html>

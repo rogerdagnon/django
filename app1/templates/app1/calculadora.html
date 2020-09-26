@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% extends 'app1/index.html' %}
+{% load static %}
+
+    <html lang="pt-BR">
+        {% block conteudo %}
+        <head>
+            <meta charset="UTF-8">
+	        <title>Minha Calculadora</title>
+	        <link rel="stylesheet" type="text/css" href="{% static "css/calculadora.css" %}">
+            <script src="{% static "js/calculadora.js" %}"></script>
+        </head>
+        <body>
+            <div id="calcInteira">
+                	<p id="visor">0</p>
+	                <table>
+	                    <tr>
+	                        <td><button onclick="cleear()">C</button></td>
+	                        <td><button onclick="btPonto()">.</button></td>
+	                        <td><button id="bdivisao" onclick="operador(this.id)">/</button></td>
+	                    </tr>
+	                    <tr>
+	                    <td><button id="bsoma" onclick="operador(this.id)">+</button></td>
+	                    <td><button id="bsubtracao" onclick="operador(this.id)">-</button></td>
+	                    <td><button id="bmultiplicacao" onclick="operador(this.id)">*</button></td>
+	                    </tr>
+	                    <tr>
+	                    <td><button id="b7" onclick="botao_numero(this.id)">7</button></td>
+	                    <td><button id="b8" onclick="botao_numero(this.id)">8</button></td>
+	                    <td><button id="b9" onclick="botao_numero(this.id)">9</button></td>
+	                    </tr>
+	                    <tr>
+	                    <td><button id="b4" onclick="botao_numero(this.id)">4</button></td>
+	                    <td><button id="b5" onclick="botao_numero(this.id)">5</button></td>
+	                    <td><button id="b6" onclick="botao_numero(this.id)">6</button></td>
+	                    </tr>
+	                    <tr>
+	                    <td><button id="b1" onclick="botao_numero(this.id)">1</button></td>
+	                    <td><button id="b2" onclick="botao_numero(this.id)">2</button></td>
+	                    <td><button id="b3" onclick="botao_numero(this.id)">3</button></td>
+	                    </tr>
+	                    <tr>
+	                    <td><button onclick="positivoNegativo()">+/-</button></td>
+	                    <td><button id="b0" onclick="botao_numero(this.id)">0</button></td>
+	                    <td><button onclick="resultado()">=</button></td>
+	                    </tr>
+                    </table>
+            </div>
+        </body>
+        {% endblock %}
+    </html>
